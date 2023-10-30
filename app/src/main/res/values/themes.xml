@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DatosPersonalesApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+        <item name="title">@string/app_name</item>
+        <item name="android:colorBackground">@color/mintCream</item>
+        <item name="colorPrimary">@color/darkGrey</item>
+        <item name="colorSurface">@color/mintGreen</item>
+
+    </style>
+
+    <style name="Theme.DatosPersonalesApp" parent="Base.Theme.DatosPersonalesApp">
+
+    </style>
+</resources>

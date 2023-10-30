@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datos Personales</string>
+    <string name="nombre">NOMBRE:</string>
+    <string name="nombrePlaceholder">Introduzca tu nombre...</string>
+    <string name="apellidos">APELLIDOS:</string>
+    <string name="apellidosPlaceholder">Introduzca tus apellidos...</string>
+    <string name="edad">EDAD:</string>
+    <string name="genero">GÉNERO:</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="estadoCivil">ESTADO CIVIL:</string>
+    <string name="estadoCivilprompt">Selecciona tu estado...</string>
+    <string-array name="listaEstadoCivil">
+        <item name="estadoCivilSelect">Selecciona tu estado...</item>
+        <item name="soltero">Solter@</item>
+        <item name="casado">Casad@</item>
+        <item name="separado">Separad@</item>
+        <item name="viudo">Viud@</item>
+        <item name="otro">Otr@</item>
+    </string-array>
+    <string name="tienesHijos">¿TIENES HIJOS?</string>
+    <string name="no">No</string>
+    <string name="si">Sí</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="borrar">BORRAR</string>
+    <string name="mensaje">Rellena la siguiente información:</string>
+
+    <string name="mensajeEdadMayor">mayor de edad</string>
+    <string name="mensajeEdadMinor">minor de edad</string>
+    <string name="mensajeHombre">hombre</string>
+    <string name="mensajeMujer">mujer</string>
+    <string name="hijosSi">con hijos.</string>
+    <string name="hijosNo">sin hijos.</string>
+
+    <string name="y">y</string>
+</resources>

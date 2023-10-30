@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textMensaje2"
+        android:layout_width="355dp"
+        android:layout_height="80dp"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textMensaje"
+        app:layout_constraintStart_toStartOf="@+id/textMensaje"
+        app:layout_constraintTop_toBottomOf="@+id/textMensaje" />
+
+    <TextView
+        android:id="@+id/textNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing=".05"
+        android:text="@string/nombre"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051"
+        tools:ignore="TextSizeCheck" />
+
+    <Spinner
+        android:id="@+id/listaEstadoCivil"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:drawSelectorOnTop="true"
+        android:dropDownWidth="match_parent"
+        android:entries="@array/listaEstadoCivil"
+        android:prompt="@string/estadoCivilprompt"
+        android:spinnerMode="dropdown"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/editTextEdad"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextApellidos"
+        app:layout_constraintStart_toStartOf="@+id/editTextApellidos"
+        app:layout_constraintTop_toBottomOf="@+id/editTextApellidos"
+        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/nombrePlaceholder"
+        android:inputType="textCapWords"
+        android:textColorHint="#8D6E63"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        tools:ignore="Autofill" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEdad"
+        app:layout_constraintStart_toStartOf="@+id/editTextEdad"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEdad">
+
+        <RadioButton
+            android:id="@+id/radioHombre"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:text="@string/hombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.594"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="277dp" />
+
+        <RadioButton
+            android:id="@+id/radioMujer"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/mujer"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintStart_toEndOf="@+id/radioHombre"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEdad"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="VisualLintBounds" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:forceHasOverlappingRendering="false"
+        android:letterSpacing=".05"
+        android:text="@string/apellidos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/textNombre"
+        app:layout_constraintStart_toStartOf="@+id/textNombre"
+        app:layout_constraintTop_toBottomOf="@+id/textNombre"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/textGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing=".05"
+        android:text="@string/genero"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/textEdad"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textEdad"
+        app:layout_constraintTop_toBottomOf="@+id/textEdad"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTextApellidos"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textCapWords"
+        android:ems="10"
+        android:hint="@string/apellidosPlaceholder"
+        android:textColorHint="#8D6E63"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextNombre"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombre"
+        tools:ignore="Autofill" />
+
+    <Switch
+        android:id="@+id/switchHijos"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:accessibilityHeading="false"
+        android:allowUndo="true"
+        android:checked="false"
+        android:fitsSystemWindows="false"
+        android:inputType="text|textCapWords"
+        android:padding="120dp"
+        android:scaleX="1.5"
+        android:scaleY="1.6"
+        android:showText="true"
+        android:splitTrack="false"
+        android:textOff="@string/no"
+        android:textOn="@string/si"
+        android:thumb="@drawable/myswitchthumb"
+        app:layout_constraintEnd_toEndOf="@+id/listaEstadoCivil"
+        app:layout_constraintStart_toStartOf="@+id/listaEstadoCivil"
+        app:layout_constraintTop_toBottomOf="@+id/listaEstadoCivil"
+        tools:ignore="Deprecated,TextViewEdits,UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/textEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing=".05"
+        android:text="@string/edad"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/textApellidos"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textApellidos"
+        app:layout_constraintTop_toBottomOf="@+id/textApellidos"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/textTienesHijos"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing=".01"
+        android:text="@string/tienesHijos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/textEstadoCivil"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textEstadoCivil"
+        app:layout_constraintTop_toBottomOf="@+id/textEstadoCivil"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/textEstadoCivil"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/estadoCivil"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/textGenero"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textGenero"
+        app:layout_constraintTop_toBottomOf="@+id/textGenero"
+        tools:ignore="TextSizeCheck,VisualLintBounds" />
+
+    <Button
+        android:id="@+id/buttonEnviar"
+        android:layout_width="130dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="60dp"
+        android:backgroundTint="@color/cambridgeBlue"
+        android:text="@string/enviar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971" />
+
+    <Button
+        android:id="@+id/buttonBorrar"
+        android:layout_width="130dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/cambridgeBlue"
+        android:text="@string/borrar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971" />
+
+    <TextView
+        android:id="@+id/textMensaje"
+        android:layout_width="355dp"
+        android:layout_height="35dp"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.744" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
